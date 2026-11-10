@@ -14,4 +14,9 @@ def check_gryffindor_eligibility(bravery, loyalty, ambition):
     # TODO: Write your if / elif / else logic here.
     # This time you will need to combine comparison operators
     # (>, <, ==, >=, <=) with and / or.
-    pass
+    if bravery < 0 or bravery > 10 or loyalty < 0 or loyalty > 10 or ambition < 0 or ambition > 10:
+        return "Invalid score"
+    if bravery >=7 and (loyalty >= 5 or ambition >= 5):
+        return "Gryffindor material!"
+    else:
+        return "Not Gryffindor material."
